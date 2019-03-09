@@ -76,7 +76,7 @@ class CartPolar:
 
     def gt2cart(self, gt):
 
-        R = gt[0]*(self.final_radius-self.initial_radius)/self.col_len
-        Theta = gt[1]*2.*np.pi / self.row_len
+        R = gt*(self.final_radius-self.initial_radius)/self.col_len
+        Theta = np.arange(self.row_len)*2.*np.pi / self.row_len
 
         return self.__polar2cart(R, Theta)
